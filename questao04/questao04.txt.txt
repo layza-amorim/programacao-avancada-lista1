@@ -1,0 +1,91 @@
+int main() {
+  int valor;
+  int *p1;
+  float temp;
+  float *p2;
+  char aux;
+  char *nome = "Ponteiros";
+  char *p3;
+  int idade;
+  int vetor[3];
+  int *p4;
+  int *p5;
+  
+  /* (a) */
+  valor = 10; //a variável valor recebe o valor de 10
+  p1 = &valor;//p1 recebe o endereço de valor
+  *p1 = 20; //altera o endereço de p1 e consequentemente o valor da variável valor para 20
+  printf("%d \n", valor); //imprime valor da variável valor. Resultado 20
+  
+
+    /* (b) */
+  temp = 26.5; //a variável temp recebe o valor de 26.5
+  p2 = &temp; //p2 aponta para o valor de temp
+  *p2 = 29.0; //altera o endereço de p2 e consequentemente o valor da variável temp para 29.0
+  printf("%.1f \n", temp);//imprime o valor da variável tem. Resultado 29.0
+  
+
+  /* (c) */
+  p3 = &nome[0];//p3 recebe o endereço da primeira posição do vetor nome
+  aux = *p3; //axu recebe o valor de p3
+  printf("%c \n", aux);//imprime o valor de aux. Resultado P
+
+
+  /* (d) */
+  p3 = &nome[4]; //p3 recebe o endereço da posição 4 do vetor nome 
+  aux = *p3; //aux recebe o valor de p3
+  printf("%c \n", aux);//imprime o valor de aux. Resultado e
+  
+  
+  /* (e) */
+  p3 = nome; //p3 recebe o endereço do vetor nome na primeira posição
+  printf("%c \n", *p3);//imprime o valor que p3 aponta. Resultado P
+  
+  
+  /* (f) */
+  p3 = p3 +4;//desloca o endereço de p3 em 4bytes à frente
+  printf("%c \n", *p3);//imprime o valor que p3 aponta. Resultado e
+  
+  
+  /* (g) */
+  p3--; //desloca o valor de p3 em 3bytes para trás 
+  printf("%c \n", *p3);//imprime o valor que p3 aponta. Resultado t
+  
+  
+  /* (h) */
+  vetor[0] = 31;//a posição 0 do vetor vetor recebe o valor de 31
+  vetor[1] = 45;//a posição 1 do vetor vetor recebe o valor de 45
+  vetor[2] = 27;//a posição 2 do vetor vetor recebe o valor de 27
+  p4 = vetor;//p4 aponta para o valor da primeira posição do vetor vetor
+  idade = *p4;//idade recebe o valor que p4 aponta
+  printf("%d \n", idade);//imprime i valor de idade. Resultado 31
+  
+  
+  /* (i) */
+  p5 = p4 +1;//p5 recebe o endereço de p4 em um byte para a frente
+  idade = *p5;//idade guarda o valor que p5 aponta
+  printf("%d \n", idade);//imprime o valor de idade. Resultado 45
+  
+  
+  /* (j) */
+  p4 = p5 + 1;//p4 recebe o endereço de p5 em um byte para a frente
+  idade = *p4;//idade recebe o valor que p4 aponta
+  printf("%d \n", idade);//imprime o valor de idade. Resultado 27
+
+
+  /* (l) */
+  p4 = p4 - 2;//p4 recebe o valor de p4 em 2bytes para trás
+  idade = *p4;//idade recebe o valor que p4 aponta
+  printf("%d \n", idade);//imprime o valor de idade. Resultado 31
+  
+  
+  /* (m) */
+  p5 = &vetor[2] - 1; //p5 recebe o endereço da posição 2 do vetor vetor em um byte para trás
+  printf("%d \n", *p5);//imprime o valor que p5 aponta. Resultado 45
+  
+  
+  /* (n) */
+  p5++;//desloca o endereço de p5 em 2bytes para a frente
+  printf("%d \n", *p5);//imprime o valor que p5 aponta. Resultado 27
+  return(0);
+}

@@ -1,0 +1,8 @@
+p = i; //ilgeal, forma incorreta de um ponteiro receber um endereço
+q = &j;
+p = &*&i;
+i = (*&)j; //ilegal, o parêntese faz com que i não receba o valor e o programa não seja executado
+i = *&j;
+i = *&*&j;
+q = *p; //ilegal, um ponteiro deve receber somente endereços e não ponteiros
+i = (*p)++ + *q;

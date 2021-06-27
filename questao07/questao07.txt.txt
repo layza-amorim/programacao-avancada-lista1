@@ -1,0 +1,4 @@
+p = mat + 1; //válida
+p = mat++; //inválida, pois não é possível incrementar um valor int de vetor e atribuir a um ponteiro
+p = ++mat;//inválida, pois não é possível increntar um valor int de vetor e atribuir a um ponteiro
+x = (*mat)++;//válida

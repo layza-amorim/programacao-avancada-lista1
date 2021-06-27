@@ -1,0 +1,16 @@
+int main(){
+  int vet[] = {4,9,13};//cria um vetor e atribui a ele três valores
+  int i;//cria uma variável inteira i
+  for(i=0;i<3;i++){//faz um laço for para percorrer o vetor vet
+  printf("%d ",*(vet+i));//imprime o valor que o vetor vet aponta na posição atual do laço for, ou seja, vai imprimir todos os valores do vetor
+  }
+}
+
+
+int main(){
+  int vet[] = {4,9,13};//cria um vetor e atribui a ele três valores
+  int i;//cria uma variável inteira i
+  for(i=0;i<3;i++){//faz um laço for para percorrer o vetor vet
+  printf("%X ",vet+i);//imprime o endereço (valor hexadecimal) do vetor na posição atual do laço for, ou seja, vai imprimir todos os valores do vetor em hexadecimal
+  }
+}

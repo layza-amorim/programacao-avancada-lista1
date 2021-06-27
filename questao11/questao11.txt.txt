@@ -1,0 +1,8 @@
+aloha[2] = value;//válido. A posição 2 do vetor aloha recebe o valor de value (2.2)
+scanf("%f", &aloha);//válido. Porém podem aparecer valores lixo caso o vetor não seja preenchido
+aloha = value"; //inválida, pois não foi informada a posição do vetor que irá receber o valor
+printf("%f", aloha);//válido. Imprime o valor de aloha
+coisas[4][4] = aloha[3];//válido
+coisas[5] = aloha;//inválida, pois a posição de um vetor deve recever um valor e não um vetor inteiro
+pf = value;//inválida, pois é a forma incorreta de passar um endereço a um ponteiro. O correto é usar &value
+pf = aloha;//válida. pf aponta para o endereço do vetor aloha
